@@ -23,8 +23,8 @@ RUN apt-get -y update \
                python-virtualenv \
                python-yaml \
                zlib1g-dev \
-			   nginx \
-			   supervisor \
+	       nginx \
+	       supervisor \
     && rm -rf /var/lib/apt/lists/*
 
 RUN pip install PyYAML
