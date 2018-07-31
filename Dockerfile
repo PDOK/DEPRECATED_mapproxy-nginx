@@ -23,8 +23,8 @@ RUN apt-get -y update \
                python-virtualenv \
                python-yaml \
                zlib1g-dev \
-	       nginx \
-	       supervisor \
+               nginx \
+               supervisor \
     && rm -rf /var/lib/apt/lists/*
 
 RUN pip install PyYAML
@@ -38,7 +38,7 @@ RUN pip install uwsgi
 RUN groupadd -g 1337 mapproxy \
     && useradd --shell /bin/bash --gid 1337 -m mapproxy \
     && usermod -a -G sudo mapproxy
-	
+
 RUN mkdir /usr/local/mapproxy
 
 # Create dictionaries directory and copy setup script
