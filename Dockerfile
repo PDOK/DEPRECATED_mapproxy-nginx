@@ -41,11 +41,6 @@ RUN groupadd -g 1337 mapproxy \
 
 RUN mkdir /usr/local/mapproxy
 
-# Create dictionaries directory and copy setup script
-COPY dictionaries/ /dictionaries/
-RUN chmod +r /dictionaries/* \
-    && chmod +rx /dictionaries/setup-dict-values.sh
-
 # Create a `mapproxy` service
 RUN mkdir /usr/local/mapproxy/cache_data
 RUN chmod a+rwx /usr/local/mapproxy/cache_data
