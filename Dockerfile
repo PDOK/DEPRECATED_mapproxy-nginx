@@ -1,8 +1,5 @@
 FROM python:3.7
-
-MAINTAINER PDOK dev <pdok@kadaster.nl>
-
-ENV TZ Europe/Amsterdam
+LABEL maintainer="PDOK dev <pdok@kadaster.nl>"
 
 # Add Nginx to sources
 RUN echo "deb http://nginx.org/packages/mainline/debian/ stretch nginx" >> /etc/apt/sources.list
